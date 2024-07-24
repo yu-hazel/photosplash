@@ -22,6 +22,9 @@ function CommonNav() {
 
     useEffect(() => {
         // console.log(location.pathname)
+        console.log(page)
+        console.log(search)
+        
         navigation.forEach((nav: Navigation) => {
             nav.isActive = false
 
