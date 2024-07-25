@@ -9,7 +9,7 @@ interface Props {
 
 function Card({ data, handleDialog, handleSetData }: Props) {
     const openDialog = () => {
-        console.log("클릭 함수 호출")
+        // console.log("클릭 함수 호출")
         handleDialog(true)
         handleSetData(data)
     }

@@ -8,9 +8,12 @@ function CommonHeader() {
     const moveToPage = () => {
         navigate('/bookmark')
     }
+    const moveToMain = () => {
+        window.location.href = 'https://yu-hazel.github.io/photosplash/'
+    }
     return (
         <header className={styles.header}>
-            <div className={styles.header__logoBox}>
+            <div className={styles.header__logoBox} onClick={moveToMain}>
                 <img src="/photosplash/assets/images/image-logo.png" alt="logoImg" className={styles.header__logoBox__logo} />
                 <span className={styles.header__logoBox__title}>PhotoSplash</span>
             </div>
