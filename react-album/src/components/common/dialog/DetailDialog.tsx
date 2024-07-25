@@ -53,8 +53,8 @@ function DetailDialog({ data, handleDialog }: Props) {
     }, [])
 
     return (
-        <div className={styles.container}>
-            <div className={styles.container__dialog}>
+        <div className={styles.container} onClick={closeDialog}>
+            <div className={styles.container__dialog} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.container__dialog__header}>
                     <div className={styles.close}>
                         <button className={styles.close__button} onClick={closeDialog}>
