@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import { useRecoilValueLoadable } from "recoil"
 import { imageData } from "@/recoil/selectors/imageSelector"
+import { CardDTO } from "./types/card"
 
 import CommonHeader from "@components/common/header/CommonHeader"
 import CommonSearchBar from "@components/common/searchBar/CommonSearchBar"
@@ -8,10 +9,10 @@ import CommonNav from "@components/common/navigation/CommonNav"
 import CommonFooter from "@/components/common/footer/CommonFooter"
 import Card from "./components/Card"
 import DetailDialog from "@/components/common/dialog/DetailDialog"
+import Loading from "./components/Loading"
 
 // CSS
 import styles from "./styles/index.module.scss"
-import { CardDTO } from "./types/card"
 
 function index() {
     const imgSelector = useRecoilValueLoadable(imageData)
@@ -26,7 +27,7 @@ function index() {
             })
             return result
         } else {
-            return <div>Loading...</div>
+            return <Loading />
         }
     }, [imgSelector])
 
